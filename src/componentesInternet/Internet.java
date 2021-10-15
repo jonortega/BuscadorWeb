@@ -1,9 +1,22 @@
 package componentesInternet;
 
 public class Internet {
+	
+	private static final Internet miInternet;
 
-	public Internet() {
+	private Internet() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	/**
+	 * Devuelve la única instancia de la clase
+	 * @return miInternet: la única instancia de la clase Internet
+	 */
+	public static Internet getInstance() {
+		if(miInternet == null) {
+			miInternet = new Internet();
+		}
+		return miInternet;
 	}
 	
 	/**

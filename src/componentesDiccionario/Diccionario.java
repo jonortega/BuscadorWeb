@@ -1,9 +1,22 @@
 package componentesDiccionario;
 
 public class Diccionario {
+	
+	private static final Diccionario miDiccionario;
 
 	public Diccionario() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	/**
+	 * Devuelve la única instancia de la clase
+	 * @return miDiccionario: la única instancia de la clase Diccionario
+	 */
+	public static Diccionario getInstance() {
+		if(miDiccionario == null) {
+			miDiccionario = new Diccionario();
+		}
+		return miDiccionario;
 	}
 	
 	/**
