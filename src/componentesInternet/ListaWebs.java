@@ -1,9 +1,13 @@
 package componentesInternet;
 
+import java.util.ArrayList;
+
 public class ListaWebs {
+	
+	private ArrayList<Web> miLista;
 
 	public ListaWebs() {
-		// TODO Auto-generated constructor stub
+		miLista = new ArrayList<Web>();
 	}
 	
 	/**
@@ -11,7 +15,9 @@ public class ListaWebs {
 	 * @param web: la web a añadir
 	 * PRE: web no está en la lista
 	 */
-	public void anadirWeb(Web web) {}
+	public void anadirWeb(Web web) {
+		miLista.add(web);
+	}
 	
 	/**
 	* Añade un enlace a una web de la lista
