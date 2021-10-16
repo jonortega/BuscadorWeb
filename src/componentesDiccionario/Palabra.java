@@ -1,9 +1,13 @@
 package componentesDiccionario;
 
-public class Palabra {
+public class Palabra<T> {
 
-	public Palabra() {
-		// TODO Auto-generated constructor stub
+	String info;
+	Palabra<T> next;
+	Palabra<T> prev;
+	
+	public Palabra(String pal) {
+		info = pal;
 	}
 
 }
