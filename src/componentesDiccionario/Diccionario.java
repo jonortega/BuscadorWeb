@@ -2,7 +2,7 @@ package componentesDiccionario;
 
 public class Diccionario {
 	
-	private static final Diccionario miDiccionario;
+	private static Diccionario miDiccionario;
 
 	public Diccionario() {
 		// TODO Auto-generated constructor stub
