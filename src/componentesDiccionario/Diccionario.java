@@ -1,5 +1,5 @@
 package componentesDiccionario;
-
+// aaaaaaaaaaaaaaaaaaaaaaaaaaa
 public class Diccionario {
 	
 	private static final Diccionario miDiccionario;
