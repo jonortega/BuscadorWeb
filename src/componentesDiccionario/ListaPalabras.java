@@ -1,5 +1,5 @@
 package componentesDiccionario;
-
+//comentario
 public class ListaPalabras {
 
 	private Palabra<String> first;
