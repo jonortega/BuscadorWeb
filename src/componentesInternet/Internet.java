@@ -1,5 +1,5 @@
 package componentesInternet;
-
+//Pablo es un chupapijas
 public class Internet {
 	
 	private static final Internet miInternet;
