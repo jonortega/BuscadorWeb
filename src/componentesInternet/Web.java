@@ -4,6 +4,7 @@ public class Web {
 	
 	private String nombre;
 	private int indice;
+	private ListaWebs linksSalientes;
 
 	/**
 	 * Constructora de la clase Web
@@ -13,6 +14,7 @@ public class Web {
 	public Web(String nombre, int indice) {
 		this.nombre = nombre;
 		this.indice = indice;
+		linksSalientes = new ListaWebs();
 	}
 	
 	/**
