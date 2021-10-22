@@ -1,13 +1,15 @@
 package componentesDiccionario;
 
-public class Palabra<T> {
+import componentesInternet.ListaWebs;
+
+public class Palabra {
 
 	String info;
-	Palabra<T> next;
-	Palabra<T> prev;
+	ListaWebs coincidencias;
 	
 	public Palabra(String pal) {
 		info = pal;
+		coincidencias = new ListaWebs();
 	}
 
 }
