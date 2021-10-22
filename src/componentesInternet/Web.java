@@ -23,6 +23,10 @@ public class Web {
 		return indice;
 	}
 	
+	/**
+	 * Añade la web con la que hace enlace la web actual
+	 * @param idEnlace: el id de la web con la que existe un enlace
+	 */
 	public void anadirEnlace(int idEnlace) {
 		links.anadirWeb(new Web(idEnlace));
 	}
