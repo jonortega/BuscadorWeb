@@ -11,5 +11,13 @@ public class Palabra {
 		info = pal;
 		coincidencias = new ListaWebs();
 	}
+	
+	/**
+	 * Getter para el atributo info
+	 * @return El atributo info
+	 */
+	public String getInfo() {
+		return info;
+	}
 
 }

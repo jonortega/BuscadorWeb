@@ -1,34 +1,24 @@
 package componentesDiccionario;
-//comentario
+
+import java.util.ArrayList;
+
 public class ListaPalabras {
 
-	private Palabra<String> first;
-	private Palabra<String> last;
+	ArrayList<Palabra> palabras;
 	
 	/**
 	 * Constructora: Genera una lista vacia
 	 */
 	public ListaPalabras() {
-		first = null;
-		last = null;
+		palabras = new ArrayList<Palabra>();
 	}
 	
 	/**
 	* Añade una palabra a la lista
 	* @param palabra: palabra a añadir
 	*/
-	public void anadirPalabra(Palabra<String> palabra) {
-		if (first == null) {
-			first = palabra;
-			last = palabra;
-			palabra.prev = null;
-			palabra.next = null;
-		} else {
-			last.next = palabra;
-			palabra.prev = last;
-			palabra.next = null;
-			last = palabra;
-		}
+	public void anadirPalabra(Palabra palabra) {
+		palabras.add(palabra);
 	}
 	
 	/**
@@ -36,15 +26,23 @@ public class ListaPalabras {
 	* @param sPalabra: texto de la palabra a buscar
 	* @return la Palabra (si está en la lista), null en caso contrario
 	*/
-	public Palabra<String> buscarPalabra(String sPalabra) {
-		Palabra<String> devol = null;
-		Palabra<String> actual = first;
-		boolean found = false;
-		
-		while((actual.next != null) && (!found)) {
-			if(actual.info.equals(sPalabra)) devol = actual;
+	public Palabra buscarPalabra(String sPalabra) {		//TODO: Comprobar si funciona bien
+		//Búsqueda dicotomica
+		int izq = 0;
+		int der = palabras.size()-1;
+		int medio = (izq + der)/2;
+		Palabra devol = null;
+
+		while((izq < der) && (!palabras.get(medio).getInfo().equals(sPalabra))) {
+			//Si la palabra del medio es "mayor" que la palabra a buscar
+			if(palabras.get(medio).getInfo().compareToIgnoreCase(sPalabra) > 0) {
+				der = medio-1;
+			} else {
+				izq = medio+1;
+			}
+			medio = (izq + der)/2;
 		}
-		
+		if(palabras.get(medio).getInfo().equals(sPalabra)) devol = palabras.get(medio);
 		return devol;
 	}
 
