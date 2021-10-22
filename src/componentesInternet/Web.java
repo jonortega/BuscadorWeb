@@ -2,27 +2,17 @@ package componentesInternet;
 
 public class Web {
 	
-	private String nombre;
 	private int indice;
-	private ListaWebs linksSalientes;
+	private ListaWebs links;
 
 	/**
 	 * Constructora de la clase Web
 	 * @param nombre: el nombre de la web
 	 * @param indice: el indice de la web
 	 */
-	public Web(String nombre, int indice) {
-		this.nombre = nombre;
+	public Web(int indice) {
 		this.indice = indice;
-		linksSalientes = new ListaWebs();
-	}
-	
-	/**
-	 * Getter para el atributo nombre
-	 * @return nombre: el nombre de la web
-	 */
-	public String getNombre() {
-		return nombre;
+		links = new ListaWebs();
 	}
 	
 	/**
@@ -31,6 +21,10 @@ public class Web {
 	 */
 	public int getIndice() {
 		return indice;
+	}
+	
+	public void anadirEnlace(int idEnlace) {
+		links.anadirWeb(new Web(idEnlace));
 	}
 
 }
