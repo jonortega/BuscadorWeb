@@ -25,8 +25,6 @@ public class ListaWebs {
 	* @param idWebDestino: id de la web de destino
 	* PRE: las webs con id idWebOrigen e idWebDestino están en la lista
 	*/ 
-	public void anadirEnlace(int idWebOrigen, int idWebDestino) {
-		webs.get(idWebOrigen).anadirEnlace(idWebDestino);
-	}
+	public void anadirEnlace(int idWebOrigen, int idWebDestino) {}
 	
 }

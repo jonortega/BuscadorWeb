@@ -29,11 +29,13 @@ public class AplicacionWeb {
 			System.out.println("0. Salir");
 			opcion = Integer.parseInt(sc.nextLine());
 			switch(opcion) {
-			case 1: System.out.println("Introduce una palabra: ");
-					pal = sc.nextLine();
-					internet.buscadorWeb(pal);
-				    break;
-			default: break;
+			case 1: 
+				System.out.println("Introduce una palabra: ");
+				pal = sc.nextLine();
+				internet.buscadorWeb(pal);
+				break;
+			default: 
+				break;
 			}
 		}
 		sc.close();
