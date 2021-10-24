@@ -1,10 +1,13 @@
 package componentesDiccionario;
 
+//prueba push
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
 import componentesInternet.Web;
+
 
 public class Diccionario {
 	
