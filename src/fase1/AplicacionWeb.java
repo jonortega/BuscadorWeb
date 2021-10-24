@@ -15,10 +15,10 @@ public class AplicacionWeb {
 	public static void main(String[] args) throws IOException {
 		
 		Internet internet = Internet.getInstance();
-		internet.inicializar("./data/smallindex.txt", "./data/smallpld_arc.txt"); //TO DO: inicializar Internet
+		internet.inicializar("./data/smallindex", "./data/smallpld_arc"); //TODO: No se carga bien Internet
 		
 		Diccionario diccionario = Diccionario.getInstance();
-		diccionario.inicializar("./data/words.text"); //TO DO: inicializar Diccionario
+		diccionario.inicializar("./data/words.txt"); //TODO: no se carga bien Diccionario
 		
 		int opcion = 1;
 		Scanner sc = new Scanner(System.in);
@@ -27,11 +27,15 @@ public class AplicacionWeb {
 			System.out.println("Que deseas hacer?");
 			System.out.println("1. Buscar webs por palabra clave");
 			System.out.println("0. Salir");
+			System.out.println();
+			System.out.print("Seleccion: ");
 			opcion = Integer.parseInt(sc.nextLine());
 			switch(opcion) {
 			case 1: 
-				System.out.println("Introduce una palabra: ");
+				System.out.println();
+				System.out.print("Introduce una palabra: ");
 				pal = sc.nextLine();
+				System.out.println();
 				internet.buscadorWeb(pal);
 				break;
 			default: 

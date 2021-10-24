@@ -91,8 +91,6 @@ public class Internet {
 	* que tienen dicha palabra clave
 	* @param sPalabra: string con la palabra
 	*/
-	public void buscadorWeb(String sPalabra) {
-		System.out.print("Funciona bien");
-	}
+	public void buscadorWeb(String sPalabra) {}
 
 }
