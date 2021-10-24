@@ -44,6 +44,7 @@ public class Diccionario {
 				palabras.anadirPalabra(nuevaPalabra);
 			}
 			fe.close();
+			System.out.println("Palabras cargadas correctamente.");
 			
 		} catch (FileNotFoundException e) {
 			System.out.println("No se ha podido leer el archivo");

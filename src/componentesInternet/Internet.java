@@ -46,9 +46,10 @@ public class Internet {
 				lista.anadirWeb(newWeb);
 			}
 			fe.close();
+			System.out.println("Webs cargadas correctamente.");
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("No se ha podido leer el archivo");
+			System.out.println("No se ha podido leer el archivo.");
 		}
 	}
 	
@@ -70,9 +71,10 @@ public class Internet {
 				lista.anadirEnlace(idWebOrigen, idWebDestino);
 			}
 			fe.close();
+			System.out.println("Enlaces cargados correctamente.");
 			
 		} catch (FileNotFoundException e) {
-			System.out.println("No se ha podido leer el archivo");
+			System.out.println("No se ha podido leer el archivo.");
 		}
 	}
 	

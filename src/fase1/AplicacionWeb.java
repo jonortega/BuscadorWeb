@@ -15,10 +15,12 @@ public class AplicacionWeb {
 	public static void main(String[] args) throws IOException {
 		
 		Internet internet = Internet.getInstance();
-		internet.inicializar("./data/smallindex", "./data/smallpld_arc"); //TODO: No se carga bien Internet
+		internet.inicializar("./data/smallindex", "./data/smallpld-arc");
 		
 		Diccionario diccionario = Diccionario.getInstance();
-		diccionario.inicializar("./data/words.txt"); //TODO: no se carga bien Diccionario
+		diccionario.inicializar("./data/words.txt"); //TODO: Se carga pero tarda mucho (igual esta bien asi)
+		
+		System.out.println();
 		
 		int opcion = 1;
 		Scanner sc = new Scanner(System.in);
