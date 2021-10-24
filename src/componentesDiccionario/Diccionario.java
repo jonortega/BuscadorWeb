@@ -1,5 +1,5 @@
 package componentesDiccionario;
-
+//prueba push
 public class Diccionario {
 	
 	private static Diccionario miDiccionario;
