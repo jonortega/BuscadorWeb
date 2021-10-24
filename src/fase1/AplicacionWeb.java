@@ -15,10 +15,10 @@ public class AplicacionWeb {
 	public static void main(String[] args) throws IOException {
 		
 		Internet internet = Internet.getInstance();
-		internet.inicializar(null, null); //TO DO: inicializar Internet
+		internet.inicializar("./data/smallindex.txt", "./data/smallpld_arc.txt"); //TO DO: inicializar Internet
 		
 		Diccionario diccionario = Diccionario.getInstance();
-		diccionario.inicializar(null); //TO DO: inicializar Diccionario
+		diccionario.inicializar("./data/words.text"); //TO DO: inicializar Diccionario
 		
 		int opcion = 1;
 		Scanner sc = new Scanner(System.in);
