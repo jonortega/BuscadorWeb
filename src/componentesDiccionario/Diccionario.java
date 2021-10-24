@@ -1,7 +1,6 @@
 package componentesDiccionario;
-<<<<<<< HEAD
+
 //prueba push
-=======
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -9,7 +8,7 @@ import java.util.Scanner;
 
 import componentesInternet.Web;
 
->>>>>>> 1d7987fa4fa9aaad0ea089c9a6aa2c22e8a926f5
+
 public class Diccionario {
 	
 	private static Diccionario miDiccionario;
