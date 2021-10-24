@@ -65,7 +65,10 @@ public class Diccionario {
 	* Pre: Internet ya está cargado
 	* @param nomFich: nombre del fichero que contiene el diccionario
 	*/
-	public void inicializar(String nomFich) {}
+	public void inicializar(String nomFich) {
+		cargarPalabras(nomFich);
+		computarWebsDePalabras();
+	}
 	
 	/**
 	* Busca una palabra en el diccionario y la devuelve
