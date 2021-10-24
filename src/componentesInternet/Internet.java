@@ -10,10 +10,10 @@ public class Internet {
 	private ListaWebs lista;
 
 	/**
-	 * No necesita constructora asi que creo que hay que borrar
+	 * Contructora de la clase Internet.
 	 */
 	private Internet() {
-		
+		lista = new ListaWebs();
 	}
 	
 	/**
