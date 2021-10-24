@@ -1,11 +1,21 @@
 package componentesDiccionario;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.Scanner;
+
+import componentesInternet.Web;
+
 public class Diccionario {
 	
 	private static Diccionario miDiccionario;
+	private ListaPalabras palabras;
 
+	/**
+	 * Constructora de la clase Diccionario
+	 */
 	public Diccionario() {
-		// TODO Auto-generated constructor stub
+		palabras = new ListaPalabras();
 	}
 	
 	/**
@@ -23,7 +33,24 @@ public class Diccionario {
 	* Carga el diccionario desde el fichero indicado
 	* @param nomFich: nombre del fichero que contiene el diccionario
 	*/
-	private void cargarPalabras(String nomFich) {}
+	private void cargarPalabras(String nomFich) {
+		try {
+			Scanner fe = new Scanner(new FileReader(nomFich));
+			
+			while(fe.hasNext()) {
+				//Obtener la palabra desde el fichero
+				String nuevaPalabraString = fe.nextLine().trim();
+				
+				//Crear una web nueva y añadirla a la lista de webs
+				Palabra nuevaPalabra = new Palabra(nuevaPalabraString);
+				palabras.anadirPalabra(nuevaPalabra);
+			}
+			fe.close();
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("No se ha podido leer el archivo");
+		}
+	}
 	
 	/**
 	* Asigna a cada palabra del diccionario las webs a las que hace
@@ -38,7 +65,10 @@ public class Diccionario {
 	* Pre: Internet ya está cargado
 	* @param nomFich: nombre del fichero que contiene el diccionario
 	*/
-	public void inicializar(String nomFich) {}
+	public void inicializar(String nomFich) {
+		cargarPalabras(nomFich);
+		computarWebsDePalabras();
+	}
 	
 	/**
 	* Busca una palabra en el diccionario y la devuelve
@@ -46,7 +76,7 @@ public class Diccionario {
 	* @return la Palabra (si está en el diccionario), null en caso contrario
 	*/
 	public Palabra buscarPalabra(String sPalabra) {
-		return null;
+		return palabras.buscarPalabra(sPalabra);
 	}
 
 }

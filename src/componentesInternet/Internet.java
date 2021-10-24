@@ -42,7 +42,7 @@ public class Internet {
 				int newIndex = Integer.parseInt(arrayCampos[1]);
 				
 				//Crear una web nueva y añadirla a la lista de webs
-				Web newWeb = new Web(newName, newIndex);
+				Web newWeb = new Web(newIndex, newName);
 				lista.anadirWeb(newWeb);
 			}
 			fe.close();
