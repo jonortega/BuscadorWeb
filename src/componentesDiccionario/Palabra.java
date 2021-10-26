@@ -19,5 +19,13 @@ public class Palabra {
 	public String getInfo() {
 		return info;
 	}
+	
+	/**
+	 * Getter para el atributo coincidncias
+	 * @return El atributo coincidencias
+	 */
+	public ListaWebs getCoincidencias() {
+		return coincidencias;
+	}
 
 }

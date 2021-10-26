@@ -1,13 +1,22 @@
 package componentesInternet;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class ListaWebs {
+public class ListaWebs implements Iterable<Web>{
 	
 	private ArrayList<Web> webs;
 
 	public ListaWebs() {
 		webs = new ArrayList<Web>();
+	}
+	
+	/**
+	 * Devuelve el tamaño de la lista
+	 * @return El tamaño de webs
+	 */
+	public int tamaño() {
+		return webs.size();
 	}
 	
 	/**
@@ -25,6 +34,39 @@ public class ListaWebs {
 	* @param idWebDestino: id de la web de destino
 	* PRE: las webs con id idWebOrigen e idWebDestino están en la lista
 	*/ 
-	public void anadirEnlace(int idWebOrigen, int idWebDestino) {}
+	public void anadirEnlace(int idWebOrigen, int idWebDestino) {
+		webs.get(idWebOrigen).anadirEnlace(idWebDestino);
+	}
+
+	/**
+	 * Devuelve el iterador para la clase ListaWebs
+	 */
+	@Override
+	public Iterator<Web> iterator() {
+		return (new IteratorParaListaWebs());
+	}
+	
+	/**
+	 * Clase que implementa el iterador para ListaWebs
+	 *
+	 */
+	private class IteratorParaListaWebs implements Iterator<Web>{
+		private int actual;
+		
+		public IteratorParaListaWebs() {
+			actual = 0;
+		}
+
+		@Override
+		public boolean hasNext() {
+			return (actual < webs.size());
+		}
+
+		@Override
+		public Web next() {
+			actual++;
+			return (webs.get(actual));
+		}
+	}
 	
 }

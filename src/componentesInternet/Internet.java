@@ -7,13 +7,13 @@ import java.util.Scanner;
 public class Internet {
 	
 	private static Internet miInternet;
-	private ListaWebs lista;
+	private ListaWebs webs;
 
 	/**
-	 * Contructora de la clase Internet.
+	 * Constructora de la clase Internet.
 	 */
 	private Internet() {
-		lista = new ListaWebs();
+		webs = new ListaWebs();
 	}
 	
 	/**
@@ -25,6 +25,14 @@ public class Internet {
 			miInternet = new Internet();
 		}
 		return miInternet;
+	}
+	
+	/**
+	 * Getter para el atributo webs
+	 * @return El atributo web
+	 */
+	public ListaWebs getWebs() {
+		return webs;
 	}
 	
 	/**
@@ -43,7 +51,7 @@ public class Internet {
 				
 				//Crear una web nueva y añadirla a la lista de webs
 				Web newWeb = new Web(newIndex, newName);
-				lista.anadirWeb(newWeb);
+				webs.anadirWeb(newWeb);
 			}
 			fe.close();
 			System.out.println("Webs cargadas correctamente.");
@@ -68,7 +76,7 @@ public class Internet {
 				int idWebDestino = Integer.parseInt(arrayCampos[1]);
 				
 				//Añadir el enlace nuevo a la web indicada
-				lista.anadirEnlace(idWebOrigen, idWebDestino);
+				webs.anadirEnlace(idWebOrigen, idWebDestino);
 			}
 			fe.close();
 			System.out.println("Enlaces cargados correctamente.");

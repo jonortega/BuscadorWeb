@@ -4,6 +4,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+import componentesInternet.Internet;
+import componentesInternet.ListaWebs;
+import componentesInternet.Web;
+
 public class Diccionario {
 	
 	private static Diccionario miDiccionario;
@@ -56,7 +60,23 @@ public class Diccionario {
 	* referencia
 	* Pre: Internet y el diccionario ya están cargados
 	*/
-	private void computarWebsDePalabras() {} //Ver ayuda en el PDF
+	private void computarWebsDePalabras() {			//TODO: Puede que de error o no funcione bien
+		Internet internet = Internet.getInstance();
+		ListaWebs webs = internet.getWebs();
+		for(Web w : webs) {
+			for(int i=4; i<10; i++) {
+				int j = 0;
+				while(i+j <= w.getNombre().length()) {
+					String substring = w.getNombre().substring(j, i+j-1);		//Obtener los substrings
+					Palabra palEncontrada = palabras.buscarPalabra(substring);	//Buscar ese substring en el diccionario
+					if(palEncontrada != null) {									//Si coincide alguna palabra del diccionario
+						palEncontrada.getCoincidencias().anadirWeb(w);			//Añadir esa web a la lista de coincidencias de la palabra
+					}
+					j++;
+				}//Para cada subpalabra posible dentro de la palabra
+			}//Para cada tamaño de subpalabra {4, 5, 6, 7, 8, 9, 10}
+		}//Para cada palabra del diccionario
+	}
 	
 	/**
 	* Carga el diccionario desde el fichero indicado y asigna a cada palabra
