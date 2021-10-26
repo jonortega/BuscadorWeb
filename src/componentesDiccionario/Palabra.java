@@ -1,6 +1,7 @@
 package componentesDiccionario;
 
 import componentesInternet.ListaWebs;
+import componentesInternet.Web;
 
 public class Palabra {
 
@@ -26,6 +27,15 @@ public class Palabra {
 	 */
 	public ListaWebs getCoincidencias() {
 		return coincidencias;
+	}
+	
+	/**
+	 * Imprime la lista de las webs que coinciden con la palabra
+	 */
+	public void implimirCoincidencias() {
+		for(Web w : coincidencias) {
+			System.out.println(w.getNombre());
+		}
 	}
 
 }

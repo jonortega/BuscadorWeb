@@ -48,7 +48,6 @@ public class ListaWebs implements Iterable<Web>{
 	
 	/**
 	 * Clase que implementa el iterador para ListaWebs
-	 *
 	 */
 	private class IteratorParaListaWebs implements Iterator<Web>{
 		private int actual;

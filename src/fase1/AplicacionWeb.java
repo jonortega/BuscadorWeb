@@ -18,7 +18,7 @@ public class AplicacionWeb {
 		internet.inicializar("./data/smallindex", "./data/smallpld-arc");
 		
 		Diccionario diccionario = Diccionario.getInstance();
-		diccionario.inicializar("./data/words.txt"); //TODO: Se carga pero tarda mucho (igual esta bien asi)
+		diccionario.inicializar("./data/words.txt");
 		
 		System.out.println();
 		
@@ -38,6 +38,7 @@ public class AplicacionWeb {
 				System.out.print("Introduce una palabra: ");
 				pal = sc.nextLine();
 				System.out.println();
+				System.out.println("------RESULTADOS------");
 				internet.buscadorWeb(pal);
 				break;
 			default: 

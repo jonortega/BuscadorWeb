@@ -4,6 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.Scanner;
 
+import componentesDiccionario.Diccionario;
+
 public class Internet {
 	
 	private static Internet miInternet;
@@ -101,6 +103,9 @@ public class Internet {
 	* que tienen dicha palabra clave
 	* @param sPalabra: string con la palabra
 	*/
-	public void buscadorWeb(String sPalabra) {}
+	public void buscadorWeb(String sPalabra) {
+		Diccionario diccionario = Diccionario.getInstance();
+		diccionario.buscarPalabra(sPalabra).implimirCoincidencias();
+	}
 
 }
