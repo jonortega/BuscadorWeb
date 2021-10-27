@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class ListaPalabras {
 
-	ArrayList<Palabra> palabras;
+	private ArrayList<Palabra> palabras;
 	
 	/**
 	 * Constructora: Genera una lista vacia

@@ -28,8 +28,7 @@ public class AplicacionWeb {
 		while(opcion!=0) {
 			System.out.println("Que deseas hacer?");
 			System.out.println("1. Buscar webs por palabra clave");
-			System.out.println("0. Salir");
-			System.out.println();
+			System.out.println("0. Salir\n");
 			System.out.print("Seleccion: ");
 			opcion = Integer.parseInt(sc.nextLine());
 			switch(opcion) {
@@ -40,6 +39,7 @@ public class AplicacionWeb {
 				System.out.println();
 				System.out.println("------RESULTADOS------");
 				internet.buscadorWeb(pal);
+				System.out.println("----------------------"+"\n");
 				break;
 			default: 
 				break;

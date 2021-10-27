@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 import componentesDiccionario.Diccionario;
+import componentesDiccionario.Palabra;
 
 public class Internet {
 	
@@ -105,7 +106,9 @@ public class Internet {
 	*/
 	public void buscadorWeb(String sPalabra) {
 		Diccionario diccionario = Diccionario.getInstance();
-		diccionario.buscarPalabra(sPalabra).implimirCoincidencias();
+		Palabra pal = diccionario.buscarPalabra(sPalabra);
+		if(pal != null) pal.implimirCoincidencias();
+		else System.out.print("No se han encontrado coincidencias\n");
 	}
 
 }

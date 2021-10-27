@@ -5,8 +5,8 @@ import componentesInternet.Web;
 
 public class Palabra {
 
-	String info;
-	ListaWebs coincidencias;
+	private String info;
+	private ListaWebs coincidencias;
 	
 	public Palabra(String pal) {
 		info = pal;
