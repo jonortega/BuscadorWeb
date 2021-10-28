@@ -15,7 +15,7 @@ public class AplicacionWeb {
 	public static void main(String[] args) throws IOException {
 		
 		Internet internet = Internet.getInstance();
-		internet.inicializar("./data/smallindex", "./data/smallpld-arc");
+		internet.inicializar("./data/index", "./data/pld-arc");
 		
 		Diccionario diccionario = Diccionario.getInstance();
 		diccionario.inicializar("./data/words.txt");

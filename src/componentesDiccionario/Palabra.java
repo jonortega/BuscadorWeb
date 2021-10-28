@@ -32,7 +32,7 @@ public class Palabra {
 	/**
 	 * Imprime la lista de las webs que coinciden con la palabra
 	 */
-	public void implimirCoincidencias() {
+	public void imprimirCoincidencias() {
 		for(Web w : coincidencias) {
 			System.out.println(w.getNombre());
 		}

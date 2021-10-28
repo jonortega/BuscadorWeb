@@ -107,7 +107,7 @@ public class Internet {
 	public void buscadorWeb(String sPalabra) {
 		Diccionario diccionario = Diccionario.getInstance();
 		Palabra pal = diccionario.buscarPalabra(sPalabra);
-		if(pal != null) pal.implimirCoincidencias();
+		if(pal != null) pal.imprimirCoincidencias();
 		else System.out.print("No se han encontrado coincidencias\n");
 	}
 

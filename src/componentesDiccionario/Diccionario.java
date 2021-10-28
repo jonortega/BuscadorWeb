@@ -60,7 +60,7 @@ public class Diccionario {
 	* referencia
 	* Pre: Internet y el diccionario ya están cargados
 	*/
-	private void computarWebsDePalabras() {			//TODO: Puede que de error o no funcione bien
+	private void computarWebsDePalabras() {
 		Internet internet = Internet.getInstance();
 		ListaWebs webs = internet.getWebs();
 		for(Web w : webs) {

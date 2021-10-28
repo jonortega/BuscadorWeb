@@ -26,7 +26,7 @@ public class ListaPalabras {
 	* @param sPalabra: texto de la palabra a buscar
 	* @return la Palabra (si está en la lista), null en caso contrario
 	*/
-	public Palabra buscarPalabra(String sPalabra) {		//TODO: Comprobar si funciona bien
+	public Palabra buscarPalabra(String sPalabra) {	
 		//Búsqueda dicotomica
 		int izq = 0;
 		int der = palabras.size()-1;
@@ -34,7 +34,6 @@ public class ListaPalabras {
 		Palabra devol = null;
 
 		while((izq < der) && (!palabras.get(medio).getInfo().equals(sPalabra))) {
-			//Si la palabra del medio es "mayor" que la palabra a buscar
 			if(palabras.get(medio).getInfo().compareToIgnoreCase(sPalabra) > 0) {
 				der = medio-1;
 			} else {
