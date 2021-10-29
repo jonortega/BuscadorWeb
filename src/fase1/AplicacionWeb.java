@@ -30,19 +30,21 @@ public class AplicacionWeb {
 			System.out.println("1. Buscar webs por palabra clave");
 			System.out.println("0. Salir\n");
 			System.out.print("Seleccion: ");
-			opcion = Integer.parseInt(sc.nextLine());
-			switch(opcion) {
-			case 1: 
-				System.out.println();
-				System.out.print("Introduce una palabra: ");
-				pal = sc.nextLine();
-				System.out.println();
-				System.out.println("------RESULTADOS------");
-				internet.buscadorWeb(pal);
-				System.out.println("----------------------"+"\n");
-				break;
-			default: 
-				break;
+			try {
+				opcion = Integer.parseInt(sc.nextLine());
+				switch(opcion) {
+				case 1: 
+					System.out.print("\nIntroduce una palabra: ");
+					pal = sc.nextLine();
+					System.out.println("\n------RESULTADOS------");
+					internet.buscadorWeb(pal);
+					System.out.println("----------------------"+"\n");
+					break;
+				default: 
+					break;
+				}
+			} catch(NumberFormatException e) {
+				System.out.println("El valor introducido debe ser 0/1.\n");
 			}
 		}
 		sc.close();

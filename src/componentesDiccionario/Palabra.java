@@ -33,9 +33,18 @@ public class Palabra {
 	 * Imprime la lista de las webs que coinciden con la palabra
 	 */
 	public void imprimirCoincidencias() {
-		for(Web w : coincidencias) {
-			System.out.println(w.getNombre());
+		int i = 0;
+		if(coincidencias.tamaño() == 0) {
+			System.out.print("No se han encontrado coincidencias\n");
+		} else {
+			for(Web w : coincidencias) {
+				System.out.println(w.getNombre());
+				i++;
+			}
 		}
+		
+		System.out.println("----------------------");
+		System.out.println("Resultados: " + i);
 	}
 
 }

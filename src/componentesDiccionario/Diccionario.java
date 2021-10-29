@@ -63,6 +63,7 @@ public class Diccionario {
 	private void computarWebsDePalabras() {
 		Internet internet = Internet.getInstance();
 		ListaWebs webs = internet.getWebs();
+		System.out.println("Computando webs...");
 		for(Web w : webs) {
 			for(int i=4; i<10; i++) {
 				int j = 0;
@@ -76,6 +77,7 @@ public class Diccionario {
 				}//Para cada subpalabra posible dentro de la palabra
 			}//Para cada tamaño de subpalabra {4, 5, 6, 7, 8, 9, 10}
 		}//Para cada palabra del diccionario
+		System.out.println("Webs computadas correctamente.");
 	}
 	
 	/**
